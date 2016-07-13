@@ -16,6 +16,8 @@ class Combo
 end
 
 c = Cloud.find(1)
+puts c.combo.name
+puts c.combo.url
 
 =begin
 table:clouds
