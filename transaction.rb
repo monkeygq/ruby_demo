@@ -27,6 +27,8 @@ table:network_prices
 |  4 |     NULL |      NULL |   200 | 2016-07-21 17:08:01 | 2016-07-21 17:08:01 |
 +----+----------+-----------+-------+---------------------+---------------------+
 =end
+
+# a.price(minus) gives to b.price(add) . price can't be < 0 , if price < 0 , the operations of database will be rolled back.
 a = NetworkPrice.find(3)
 b = NetworkPrice.find(4)
 begin
@@ -39,6 +41,7 @@ rescue Exception => e
 end
 
 =begin
+
 #below is my method , only for simple problems . For complex problems , transactions is good , remember save!
 begin
 a.minus(1000)
