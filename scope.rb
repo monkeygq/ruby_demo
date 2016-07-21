@@ -3,7 +3,7 @@ require "active_record"
 puts ActiveRecord::Base.establish_connection(:adapter => "mysql", :host => "localhost", :database => "hycloud_portal")
 class Cloud < ActiveRecord::Base
   scope :myscope, ->(kind) {where(:kind => kind)} # lambda 
-  scope :myscope_public, where(:kind => "public") 
+  scope :myscope_public, where(:kind => "public") # or: scope :myscope_public, ->{ where(:kind => "public") }
 end
 
 p Cloud.myscope("private").size	#=> 4
