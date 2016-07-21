@@ -7,10 +7,12 @@ class Cloud < ActiveRecord::Base
   after_find :decode
   private
   def encode
-    self.name.gsub!(/mon/,"MON")
+#    self.name.gsub!(/mon/,"MON")
+    self.name.tr!("a-y","b-z")
   end
   def decode
-    self.name.gsub!(/MON/,"mon")
+#    self.name.gsub!(/MON/,"mon")
+    self.name.tr!("b-z","a-y")
   end
 end
 
@@ -33,7 +35,7 @@ table:clouds
 |  4 | private | YanCloud        | http://222.29.159.162:8080/cloud/api | YanCloud   | 2016-04-28 09:39:59 | 2016-04-28 09:39:59 |
 |  5 | public  | Aliyun          | http://ecs.aliyuncs.com/v2.0/tokens  | Aliyun     | 2016-04-28 09:39:59 | 2016-04-28 09:39:59 |
 |  6 | public  | BuaaPublicCloud | http://219.224.171.125/api/v0.1      | BuaaPCloud | 2016-04-28 09:39:59 | 2016-04-28 09:39:59 |
-|  7 | NULL    | MONkeygq        | NULL                                 | NULL       | 2016-07-21 15:58:31 | 2016-07-21 15:58:31 |
+|  7 | NULL    | npolfzhr        | NULL                                 | NULL       | 2016-07-21 16:08:20 | 2016-07-21 16:08:20 |
 +----+---------+-----------------+--------------------------------------+------------+---------------------+---------------------+
 
 =end
