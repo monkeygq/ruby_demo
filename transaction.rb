@@ -38,18 +38,27 @@ begin
   end
 rescue Exception => e
   p "exception"
+  # model objects have been changed , this is not what I want to see
+  puts "a.price=#{a.price}"    #=> a.price=-900.0
+  puts "b.price=#{b.price}"    #=> b.price=1200.0
 end
 
-=begin
-
-#below is my method , only for simple problems . For complex problems , transactions is good , remember save!
+#below is a better way
+a = NetworkPrice.find(3)
+b = NetworkPrice.find(4)
 begin
-a.minus(1000)
-b.add(1000)
+  NetworkPrice.transaction(a, b) do  # pass model objects as parameters to transaction,
+                                     # if the operations of database are rolled back , the model objects will be rolled back.
+    b.add(1000)
+    a.minus(1000)
+  end
 rescue Exception => e
   p "exception"
+  puts "a.price=#{a.price}"    #=> a.price=100.0
+  puts "b.price=#{b.price}"    #=> b.price=200.0
 end
 
-=end
+
+
 
 
