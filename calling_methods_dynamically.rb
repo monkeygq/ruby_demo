@@ -98,7 +98,7 @@ class Computer3
   def initialize(id, data)
     @id = id
     @data = data
-    data.methods.grep(/^get_(.*)_info$/){Computer3.my_define_method $1}
+    data.methods.grep(/^get_(.*)_info$/){Computer3.my_define_method $1}  # $1 refer to (.*)
   end
   def self.my_define_method(name)
     define_method(name) do
@@ -112,7 +112,7 @@ class Computer3
 end
 
 
-pc3 = Computer2.new(2, Mydata.new)
+pc3 = Computer3.new(2, Mydata.new)
 p pc3.cpu       #=> "*cpu_info=2.00 Ghz & cpu_price=120RMB" 
 p pc3.mouse     #=> "mouse_info=wireless mouse & mouse_price=20RMB"
 p pc3.keyboard  #=> "keyboard_info=razer keyboard & keyboard_price=60RMB"
