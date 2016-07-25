@@ -27,7 +27,7 @@ F
 Finished tests in 0.000743s, 1346.7052 tests/s, 2693.4104 assertions/s.
 
   1) Failure:
-test_mymethod(TestMyclass) [myclass.rb:16]:
+test_mymethod(TestMyclass) [test_unit.rb:16]:
 <4> expected but was
 <3>.
 
