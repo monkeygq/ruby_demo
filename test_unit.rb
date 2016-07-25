@@ -16,6 +16,7 @@ class TestMyclass < Test::Unit::TestCase
     assert_equal(4, Myclass.new(100, 30).mymethod)
   end
 end
+
 =begin
 
 Run options: 
