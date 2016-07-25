@@ -5,13 +5,13 @@ class Myclass
     @b = b
   end 
   def mymethod
-    c, d = @a.divmod @b
+    c, d = @a.divmod @b # c : result , d : remainder
     c
   end
 end
 
 class TestMyclass < Test::Unit::TestCase
-  def test_mymethod # method name must begin with test
+  def test_mymethod # method name must begin with test : =~ /^test/
     assert_equal(3, Myclass.new(100, 30).mymethod)
     assert_equal(4, Myclass.new(100, 30).mymethod)
   end
