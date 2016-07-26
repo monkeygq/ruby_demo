@@ -31,7 +31,7 @@ Myclass.new.mymethod   #=> in Myclass scope , myvar = my love lcx
 
 def mymethod
   shared = 0
-  Kernel.send :define_method, :counter do # send is a Kernel class method ( Kernel is a module 233 ) 
+  Kernel.send :define_method, :counter do  
     shared
   end  
   Kernel.send :define_method, :inc do |x|
@@ -56,10 +56,10 @@ p mytest   #=> -1
 class Myclass2
   def mymethod
     shared = 0
-    Kernel.send :define_method, :test1 do
+    Myclass2.send :define_method, :test1 do # define_method : is a class method ( Module's private method ) , so use send method invoke it
       shared += 1
     end
-    Kernel.send :define_method, :test2 do
+    Myclass2.send :define_method, :test2 do # define_method : define a method for a class or a module
       shared += 1
     end
   end
