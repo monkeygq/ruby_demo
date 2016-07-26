@@ -59,7 +59,7 @@ class Myclass2
     Myclass2.send :define_method, :test1 do # define_method : is a class method ( Module's private method ) , so use send method invoke it
       shared += 1
     end
-    Myclass2.send :define_method, :test2 do # define_method : define a method for a class or a module
+    Myclass2.send :define_method, :test2 do # define_method : define a method for a class or a module , so receiver is a class or module
       shared += 1
     end
   end
