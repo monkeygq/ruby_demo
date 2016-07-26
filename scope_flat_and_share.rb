@@ -31,7 +31,7 @@ Myclass.new.mymethod   #=> in Myclass scope , myvar = my love lcx
 
 def mymethod
   shared = 0
-  Kernel.send :define_method, :counter do # send is a Kernel class method ( Kernel is a medule 233 ) 
+  Kernel.send :define_method, :counter do # send is a Kernel class method ( Kernel is a module 233 ) 
     shared
   end  
   Kernel.send :define_method, :inc do |x|
