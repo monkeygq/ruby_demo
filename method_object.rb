@@ -9,6 +9,7 @@ end
 
 myinstance = Myclass.new(1)
 method_obj = myinstance.method :get_var  # invoke Kernel#method to get method object
+p method_obj.class #=> Method
 p method_obj.call  # invoke Method#call to use method object , scope : self object
 
 myinstance2 = Myclass.new(2)
