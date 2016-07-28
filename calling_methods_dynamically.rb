@@ -111,7 +111,6 @@ class Computer3
   end
 end
 
-
 pc3 = Computer3.new(2, Mydata.new)
 p pc3.cpu       #=> "*cpu_info=2.00 Ghz & cpu_price=120RMB" 
 p pc3.mouse     #=> "mouse_info=wireless mouse & mouse_price=20RMB"
