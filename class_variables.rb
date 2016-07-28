@@ -11,6 +11,7 @@ class Mysubclass < Myclass
   end
 end
 
+
 o = Myclass.new
 p o.get_class_var  #=> 1
 
