@@ -25,3 +25,4 @@ end
 
 p two(plus(eight)) # => 10
 
+# invoke sequence : eight , plus(8) , two(["+", 8])
