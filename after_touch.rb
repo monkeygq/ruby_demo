@@ -30,7 +30,7 @@ begin
   v.touch # v is not in database , so touch can not be used                         
 rescue Exception => e
   p "10++++++++++++++++++++++++++++++++++"
-  #app.vms.map(&:destroy)                                                            
+  app.vms.map(&:destroy)                                                            
   p "11++++++++++++++++++++++++++++++++++"
   app.destroy                                                                       
   p "12++++++++++++++++++++++++++++++++++"
