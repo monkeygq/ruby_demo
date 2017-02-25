@@ -12,7 +12,7 @@ module Myconcern
 end
 
 class Myclass
-  include Myconcern
+  include Myconcern # get Myconcern's class methods and instance methods
 end
 
 p Myclass.new.an_instance_method  #=> "an_instance_method"
