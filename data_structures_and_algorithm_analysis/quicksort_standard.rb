@@ -1,7 +1,7 @@
 def partition(a, p ,r)
-  i = p - 1
-  for j in p..(r-1)
-    if a[j] < a[r]
+  i = p - 1 # index 0..i are small numbers , others are big numbers
+  for j in p..(r-1) # j is a counter
+    if a[j] < a[r] # find a small number
       i = i + 1
       a[i], a[j] = a[j], a[i]
     end
