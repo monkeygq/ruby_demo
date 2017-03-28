@@ -1,6 +1,6 @@
 def permutation(arr)
   if arr.size == 1
-    return [arr]
+    [arr]
   else
     res = []
     arr.each do |i|
