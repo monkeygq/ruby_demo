@@ -42,3 +42,4 @@ p str.instance_eval <<-CODE, __FILE__, __LINE__ + 1
   end
 CODE
 
+
