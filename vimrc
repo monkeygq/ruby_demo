@@ -26,6 +26,8 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'vim-jp/vim-go-extra'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
@@ -48,3 +50,4 @@ set expandtab
 au FileType python setl ts=4 sw=4 sts=4 et
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+nmap <C-t> :NERDTree<CR>
