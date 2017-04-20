@@ -46,8 +46,10 @@ set shiftwidth=2
 set softtabstop=2
 set shiftround
 set expandtab
+set laststatus=2
 
 au FileType python setl ts=4 sw=4 sts=4 et
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:airline_theme='bubblegum'
 nmap <C-t> :NERDTree<CR>
