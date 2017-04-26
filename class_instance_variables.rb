@@ -1,5 +1,10 @@
 class Myclass
   @var = 1  # self is Myclass
+  @class_instance_var = :hello
+  # an advanced read/write method
+  class << self
+    attr_accessor :class_instance_var  # self is Myclass
+  end
   def self.read
     @var
   end
@@ -16,3 +21,7 @@ p obj.read     #=> nil
 obj.write   
 p obj.read     #=> 2
 p Myclass.read #=> 1
+
+p Myclass.class_instance_var #=> :hello
+Myclass.class_instance_var = :world
+p Myclass.class_instance_var #=> :world
