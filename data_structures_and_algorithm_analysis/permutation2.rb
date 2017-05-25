@@ -40,3 +40,6 @@ def toggle_arrow(arrow, i)
 end
 
 permutation 5
+
+# algorithm url
+# http://www.cnblogs.com/1-2-3/archive/2011/05/23/generate-permutation-part3.html
