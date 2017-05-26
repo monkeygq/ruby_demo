@@ -23,7 +23,9 @@ end
 p combination2 [1,2,3,4]
 
 def combination3 arr
-  if arr.size == 1
+  if arr.empty?
+    return []
+  elsif arr.size == 1
     return [arr]
   else
     return combination3(arr[1..-1]) + combination3(arr[1..-1]).map {|i| i << arr[0]} + [[arr[0]]]
