@@ -12,7 +12,7 @@ def combination(n, k)
   end
 end
 
-combination(8,4).each {|i| p i }
+p combination(5, 3)
 
 def combination2(n, k)
   res = []
@@ -30,9 +30,20 @@ def combination2(n, k)
   res
 end
 
-combination2(4, 2)
+p combination2(5, 3)
 
-
+def combination3(n, start, k)
+  if k == 1
+    (start..n).map { |i| [i] }
+  else 
+    res = []
+    (start..(n-k+1)).each do |j|
+      combination3(n, j+1, k-1 ).each { |k| res << [j] + k }
+    end
+    res
+  end
+end
+p combination3(5,1,3)
 
 
 
