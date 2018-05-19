@@ -10,7 +10,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'mileszs/ack.vim'
@@ -33,20 +33,23 @@ call vundle#end()
 filetype plugin indent on
 
 syntax enable
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 
 set number
 set cursorline
 set ruler
 set hlsearch
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set shiftround
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+"set shiftround
+"set expandtab
 set laststatus=2
+set noexpandtab
+set smartindent
+set cindent
 
 au FileType python setl ts=4 sw=4 sts=4 et
 
